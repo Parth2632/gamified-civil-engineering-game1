@@ -1,24 +1,12 @@
 {
   "headers": [
     {
-      "source": "/Build/civil-learning-game-1.wasm.br",
+      "source": "/Build/(.*)\\.wasm",
       "headers": [
-        { "key": "Content-Encoding", "value": "br" },
-        { "key": "Content-Type", "value": "application/wasm" }
-      ]
-    },
-    {
-      "source": "/Build/civil-learning-game-1.framework.js.br",
-      "headers": [
-        { "key": "Content-Encoding", "value": "br" },
-        { "key": "Content-Type", "value": "application/javascript" }
-      ]
-    },
-    {
-      "source": "/Build/civil-learning-game-1.data.br",
-      "headers": [
-        { "key": "Content-Encoding", "value": "br" },
-        { "key": "Content-Type", "value": "application/octet-stream" }
+        {
+          "key": "Content-Type",
+          "value": "application/wasm"
+        }
       ]
     }
   ]
