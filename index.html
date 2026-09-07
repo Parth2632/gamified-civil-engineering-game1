@@ -52,13 +52,12 @@
       }
 
       var buildUrl = "Build";
-      var cacheBuster = "?v=" + new Date().getTime();
-      var loaderUrl = buildUrl + "/civil-learning-game-1.loader.js" + cacheBuster;
+      var loaderUrl = buildUrl + "/civil-learning-game-1.loader.js";
       var config = {
         arguments: [],
-        dataUrl: buildUrl + "/civil-learning-game-1.data" + cacheBuster,
-        frameworkUrl: buildUrl + "/civil-learning-game-1.framework.js" + cacheBuster,
-        codeUrl: buildUrl + "/civil-learning-game-1.wasm" + cacheBuster,
+        dataUrl: buildUrl + "/civil-learning-game-1.data",
+        frameworkUrl: buildUrl + "/civil-learning-game-1.framework.js",
+        codeUrl: buildUrl + "/civil-learning-game-1.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "IRC 37",
@@ -104,21 +103,9 @@
 
 
       } else {
-        // Desktop style: Render the game canvas full screen without breaking mouse coordinates:
-        document.body.style.margin = "0";
-        document.body.style.overflow = "hidden";
-        
-        var container = document.querySelector("#unity-container");
-        container.style.width = "100vw";
-        container.style.height = "100vh";
-        container.style.transform = "none";
-        container.style.left = "0";
-        container.style.top = "0";
-        
-        canvas.style.width = "100vw";
-        canvas.style.height = "100vh";
-        
-        document.querySelector("#unity-footer").style.display = "none";
+        // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
+        canvas.style.width = "960px";
+        canvas.style.height = "600px";
       }
 
       document.querySelector("#unity-loading-bar").style.display = "block";
